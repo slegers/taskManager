@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-grid.css.map" rel="stylesheet" />       
+    <link href="../css/style.css" rel="stylesheet" />       
+    
+  </head>
+  <body>
+      <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>        
+        <script src="../js/custom.js"></script>
+        <nav class="nav navbar navbar-inverse  navbar-fixed-top">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <a class="navbar-brand" href="#">Menu</a>
+                </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tasks
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="tasks/add_tasks.html">Add Task</a></li>
+                      <li><a href="#">Overview</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#">Admin</a></li>
+              </ul> 
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+                </ul>
+            </div>
+          </nav>
+        <div class="container">
+            <div class="jumbotron">
+                <div class="page-header">
+                        <h1> Task manager<br>   
+                            <small> Think great, act smart </small></h1>
+                </div>
+        </div>
+        <div id="content" class="row-fluid">
+            <div class="row">
+                <div class="col-sm-9">
+                  <h2>Add Tasks</h2>
+                <form class="form-horizontal" action="post">
+                    <div class="form-group">
+                        <label for="title" class="col-sm-2">Title:</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter title">
+                          <small id="titleHelp" class="form-text text-muted">The title of the task.</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="body" class="col-sm-2">Body:</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="5" id="body" placeholder="Enter the body"></textarea>
+                          <small id="titleHelp" class="form-text text-muted">The body of the task.</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="body" class="col-sm-2">Deadline:</label>
+                        <div class="col-sm-10">
+                          <input type="datetime-local" class="form-control" rows="5" >
+                          <small id="titleHelp" class="form-text text-muted">The deadline of the task.</small>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="form-group">
+                        <label for="body" class="col-sm-2">Tags:</label>
+                        <div class="col-sm-10">
+                            <input type="text" data-role="tagsinput">
+                          <small id="titleHelp" class="form-text text-muted">The tags associated with this task.</small>
+                        </div>
+                    </div>
+                  -->
+                    <div class="form-group">
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-10">
+                        <label class="checkbox-inline"><input type="checkbox" value="">E-mail notification?</label>
+                        <br>
+                        <small class="form-text text-muted">Recieve an E-mail one day before the task's ending?</small>
+                      </div>
+                    </div>
+                    <div class="col-sm-2"> </div>
+                    <div class="form-group col-sm-10">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                </div>
+                <div class="col-sm-3">
+                  <div class="taakBalk"> 
+                  <h3>Taakbalk</h3>
+                  <ul class="tasks">
+                    <li class="task">
+                      <div class="taskHeader">
+                        <form><input type="checkbox"> </form>
+                        <h4 class="taskTitle">Task manager afmaken en dan nog wat tekst toevoegen<br>
+                          <small>Donderdag 15 sept.</small>
+                        </h4>
+                      </div>
+                        <br>
+                        <div class="taskButtons">
+                        <input type="button" value="edit">
+                        <input type="button" value="delete">
+                        </div>
+                      </li>
+                      <li class="task">
+                        <div class="taskHeader">
+                          <form><input type="checkbox"> </form>
+                          <h4 class="taskTitle">Pleinraadweekend voorbereieden <br>
+                            <small>Donderdag 15 sept.</small>
+                          </h4>
+                        </div>
+                          <br>
+                          <div class="taskButtons">
+                          <input type="button" value="edit">
+                          <input type="button" value="delete">      
+                          </div>               
+                          <div class="tags">
+                              Speelplein, werk
+                              </div>
+                        </li>
+                  </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>

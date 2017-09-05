@@ -1,0 +1,82 @@
+
+body{
+    background-color: rgba(213, 213, 213, 0.34);
+}
+/****************************
+    TAAKBALK
+******************************/
+.task{
+    list-style-type: none;
+    display: inline-block;
+    align-self: auto;
+    width: 100%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+    border-radius: 2%;
+    margin-bottom: 5%;
+    border-bottom: thick solid #fff;
+}
+.taakBalk{
+    background-color: rgba(73, 144, 189, 0.48);
+    display: inline-block;
+    padding: 4%;
+    border-radius: 4%;
+    margin-bottom: 4%;
+}
+
+.taskHeader{
+    display: inline-flex;
+}
+.taskTitle {
+    display: inline-block;
+    text-align: right;
+}
+.taskTitle small, .taskButtons{
+    float: right;
+}
+.taakBalk > ul{
+    padding: 0px;
+}
+.taakBalk > h3{
+    text-decoration: underline;
+}
+.task input[type=checkbox] {
+    transform: scale(1.75);
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.tags{
+    margin-top: 12%;
+    text-align: left;
+ }
+/*.task:nth-child(even) {
+    background-color:#FFFAF1;
+}
+.task:nth-child(odd){
+    background-color:#f5deb3;
+} */
+.jumbotron{
+    background-color: #87CEFA;
+}
+
+#body{
+    resize: vertical;
+}
+.showTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+.line{
+    border-bottom: #000 solid 2px;
+    margin-bottom: 4%;
+    padding-bottom: 1%;
+}
+.showForm{
+    float: right;
+    margin-bottom: 8%;
+}
+.showForm > input[type=submit]{
+    font-size: 20px;
+   
+}

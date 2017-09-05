@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-grid.css.map" rel="stylesheet" />       
+    <link href="../css/style.css" rel="stylesheet" />       
+    
+  </head>
+  <body>
+      <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>        
+        <script src="../js/custom.js"></script>
+        <nav class="nav navbar navbar-inverse">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <a class="navbar-brand" href="#">Menu</a>
+                </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tasks
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="tasks/add_tasks.html">Add Task</a></li>
+                      <li><a href="#">Overview</a></li>
+                    </ul>
+                  </li>
+              </ul> 
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+                </ul>
+            </div>
+          </nav>
+        <div class="container">
+        <div id="content" class="row-fluid">
+            <div class="row">
+                <div class="col-sm-9">
+                      <h2>Overview Tasks</h2>
+                      <h3>Open Tasks</h3>
+                        <table class="table">
+                            <tr>
+                                <th> Id. </th>
+                                <th> title </th>
+                                <th> date </th>
+                                <th> Completed? </th>
+                            </tr>
+                            <tr>
+                                <td> 1. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                            <tr>
+                                <td> 1. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                            <tr>
+                                <td> 1. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                            <tr>
+                                <td> 1. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                        </table>
+                      <h3>Closed Tasks</h3>
+                      <table class="table">
+                            <tr>
+                                <th> Id. </th>
+                                <th> title </th>
+                                <th> date </th>
+                                <th> Completed? </th>
+                            </tr>
+                            <tr>
+                                <td> 1. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                            <tr>
+                                <td> 2. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                            <tr>
+                                <td> 3. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                            <tr>
+                                <td> 4. </td>
+                                <td> Drupal Core updaten </td>
+                                <td> donderdag 9 januari </td>
+                                <td> Completed? </td>
+                            </tr>
+                        </table>
+                </div>                    
+                <div class="col-sm-3">
+                  <div class="taakBalk"> 
+                  <h3>Taakbalk</h3>
+                  <ul class="tasks">
+                    <li class="task">
+                      <div class="taskHeader">
+                        <form><input type="checkbox"> </form>
+                        <h4 class="taskTitle">Task manager afmaken en dan nog wat tekst toevoegen<br>
+                          <small>Donderdag 15 sept.</small>
+                        </h4>
+                      </div>
+                        <br>
+                        <div class="taskButtons">
+                        <input type="button" value="edit">
+                        <input type="button" value="delete">
+                        </div>
+                      </li>
+                      <li class="task">
+                        <div class="taskHeader">
+                          <form><input type="checkbox"> </form>
+                          <h4 class="taskTitle">Pleinraadweekend voorbereieden <br>
+                            <small>Donderdag 15 sept.</small>
+                          </h4>
+                        </div>
+                          <br>
+                          <div class="taskButtons">
+                          <input type="button" value="edit">
+                          <input type="button" value="delete">      
+                          </div>               
+                          <div class="tags">
+                              Speelplein, werk
+                              </div>
+                        </li>
+                  </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>
