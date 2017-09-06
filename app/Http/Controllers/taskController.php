@@ -23,7 +23,7 @@ class taskController extends Controller
      */
     public function create()
     {
-        //
+        return view('tasks.create_task');
     }
 
     /**
@@ -81,4 +81,9 @@ class taskController extends Controller
     {
         //
     }
+
+    public function overview(){
+        return view('tasks.overview_task');
+    }
+
 }

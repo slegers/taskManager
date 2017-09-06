@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
+
+Route::get('/add_task', 'taskController@create');
+Route::get('task/overview', 'taskController@overview');
