@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class taskController extends Controller
 {
@@ -34,7 +35,22 @@ class taskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request['date'] < date("Y-m-d")){
+            $request->session()->flash('flash_error', 'The tasks deadline can\'t be in the past!');
+            return $this->create(); 
+        }
+        $request->session()->flash('flash_message', 'Task was successful saved!');
+        DB::table('task')->insertGetId(
+            ['deadline_date' => $request['date'],
+            'deadline_time'=> $request['time'],
+            'title' =>  $request['title'],
+            'omschrijving' => $request['body'],
+            'notificate' => array_key_exists('email',$request),
+            'closed' => '0',
+            ]
+        );
+        return $this->create();
+        
     }
 
     /**

@@ -20,10 +20,9 @@
                 <div class="col-sm-9">
                    <h2> @yield('title') </h2>
                     @yield('content')
-               
                 </div>
                 @include('layout.sidebalk')
-              </div>
+             </div>
         </div>
         </div>
   </body>

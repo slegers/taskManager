@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('/add_task', 'taskController@create');
 Route::get('task/overview', 'taskController@overview');
 Route::get('task/{id}','taskController@show');
+Route::post('/task','taskController@store');
