@@ -16,7 +16,7 @@ Add a task
     <div class="form-group">
         <label for="title" class="col-sm-2">Title:</label>
             <div class="col-sm-10">
-                <input name="title" type="input" maxlength="50" aria-describedby="titlelHelp" placeholder="Enter title" require>
+                <input name="title" maxlength="50" placeholder="Enter title" require><br>
                 <small id="titleHelp" class="form-text text-muted">The title of the task.</small>
             </div>
      </div>

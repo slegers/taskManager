@@ -24,7 +24,7 @@ body{
     margin-bottom: 4%;
 }
 
- .taskButtons{
+ .taskButtons > form{
     float: right;
 }
 .taakBalk > ul{
@@ -40,7 +40,7 @@ body{
     margin-top: 15px;
 }
 .tags{
-    margin-top: 12%;
+    /*margin-top: 12%;*/
     text-align: left;
  }
 /*.task:nth-child(even) {
