@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use App\Task;
 class taskController extends Controller
 {
     /**
@@ -14,7 +14,9 @@ class taskController extends Controller
      */
     public function index()
     {
-        //
+        $open_tasks = DB::table('task')->where('closed',0)->paginate(4);
+        $closed_tasks = DB::table('task')->where('closed',1)->paginate(4);
+        return view('tasks.overview_task', compact('open_tasks','closed_tasks'));
     }
 
     /**
@@ -46,7 +48,7 @@ class taskController extends Controller
             'title' =>  $request['title'],
             'omschrijving' => $request['body'],
             'notificate' => array_key_exists('email',$request),
-            'closed' => '0',
+            'closed' => '1',
             ]
         );
         return $this->create();

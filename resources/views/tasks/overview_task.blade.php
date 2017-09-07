@@ -11,33 +11,20 @@ Overview Tasks
             <th> date </th>
             <th> Completed? </th>
         </tr>
+        @forelse ($open_tasks as $task)
         <tr>
-            <td> 1. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
+            <td> {{ $task->id}}. </td>
+            <td> {{ $task->title }} </td>
+            <td> {{ $task->deadline_date }} </td>
+            <td> Yes </td>
         </tr>
-        <tr>
-            <td> 1. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
-        </tr>
-        <tr>
-            <td> 1. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
-        </tr>
-        <tr>
-            <td> 1. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
-        </tr>
-
+        @empty
+             <p>No open Tasks</p>
+        @endforelse
     </table>
-        <h3>Closed Tasks</h3>
+    {{ $open_tasks->links() }}
+
+    <h3>Closed Tasks</h3>
         <table class="table">
         <tr>
             <th> Id. </th>
@@ -45,29 +32,16 @@ Overview Tasks
             <th> date </th>
             <th> Completed? </th>
         </tr>
+        @forelse ($closed_tasks as $task)
         <tr>
-            <td> 1. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
+            <td> {{ $task->id}}. </td>
+            <td> {{ $task->title }} </td>
+            <td> {{ $task->deadline_date }} </td>
+            <td> Yes </td>
         </tr>
-        <tr>
-            <td> 2. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
-        </tr>
-        <tr>
-            <td> 3. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
-        </tr>
-        <tr>
-            <td> 4. </td>
-            <td> Drupal Core updaten </td>
-            <td> donderdag 9 januari </td>
-            <td> Completed? </td>
-        </tr>
+        @empty
+             <p>No open Tasks</p>
+        @endforelse
     </table>
+    {{ $closed_tasks->links() }}
 @endsection
