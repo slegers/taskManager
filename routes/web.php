@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+   $side = DB::table('task')->orderBy('deadline_date')->orderBy('deadline_time')->limit(2)->get();
+    return view('index',compact('side'));
 });
 
 Route::get('/add_task', 'taskController@create');

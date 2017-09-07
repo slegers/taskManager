@@ -24,14 +24,7 @@ body{
     margin-bottom: 4%;
 }
 
-.taskHeader{
-    display: inline-flex;
-}
-.taskTitle {
-    display: inline-block;
-    text-align: right;
-}
-.taskTitle small, .taskButtons{
+ .taskButtons{
     float: right;
 }
 .taakBalk > ul{

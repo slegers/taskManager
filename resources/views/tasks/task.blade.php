@@ -9,7 +9,7 @@ Show Task
         <div class="showTitle">Title:</div>
     </div>
     <div class="col-sm-8">
-        <p>De title van deze eerste taak</p>
+        <p>{{ $taak->title }}</p>
     </div>
 </div>
 <div class="row line">
@@ -19,8 +19,7 @@ Show Task
         </div>
     </div>
     <div class="col-sm-8">
-        <p>De volledige omschrijving van deze taak. Het is de bedoeling dat hier een paar regels
-        tekst komen. Zo is het het voorbeeld beter te begrijpen.
+        <p>{{ $taak->omschrijving }}
         </p>
     </div>
 </div>
@@ -31,7 +30,7 @@ Show Task
         </div>
     </div>
     <div class="col-sm-8">
-        <p>Donderdag 9 september 2017</p>
+        <p>{{ date('l d F',strtotime($taak->deadline_date)) }} at {{ $taak->deadline_time }}</p>
     </div>
 </div>
 <div class="row line">
@@ -41,7 +40,7 @@ Show Task
         </div>
     </div>
     <div class="col-sm-8">
-        <p> yes</p>
+        <p> {{ $taak->notificate == 0 ? "no" : "yes" }} </p>
     </div>
 </div>
 <div class="row">

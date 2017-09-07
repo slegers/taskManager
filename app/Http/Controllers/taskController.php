@@ -16,7 +16,8 @@ class taskController extends Controller
     {
         $open_tasks = DB::table('task')->where('closed',0)->paginate(4);
         $closed_tasks = DB::table('task')->where('closed',1)->paginate(4);
-        return view('tasks.overview_task', compact('open_tasks','closed_tasks'));
+        $side = $this->sideBalk(7);
+        return view('tasks.overview_task', compact('open_tasks','closed_tasks','side'));
     }
 
     /**
@@ -26,7 +27,8 @@ class taskController extends Controller
      */
     public function create()
     {
-        return view('tasks.create_task');
+        $side = $this->sideBalk(4);
+        return view('tasks.create_task',compact('side'));
     }
 
     /**
@@ -63,7 +65,9 @@ class taskController extends Controller
      */
     public function show($id)
     {
-        return view('tasks.task');
+        $taak = Task::find($id);
+        $side = $this->sideBalk(3);
+        return view('tasks.task',compact('side','taak'));
     }
 
     /**
@@ -100,8 +104,8 @@ class taskController extends Controller
         //
     }
 
-    public function overview(){
-        return view('tasks.overview_task');
-    }
-
+   public function sideBalk($numb){
+    return DB::table('task')->orderBy('deadline_date')->orderBy('deadline_time')->limit($numb)->get();
+   } 
+   
 }
