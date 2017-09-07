@@ -46,10 +46,12 @@ Show Task
 <div class="row">
     <div class="col-sm-2"></div>
         <div class="col-sm-8">
-            <form class="showForm">
+            <form class="showForm" method="get" action="/task/<?=$taak->id?>/edit">
                 <input type="submit" value="edit">
-                <input type="submit" value="delete">
             </form>
+            <form class="showForm" method="get" action="/task/<?=$taak->id?>/delete"> 
+                <input type="submit" value="delete">
+            </form> 
         </div>
 </div>
 @endsection

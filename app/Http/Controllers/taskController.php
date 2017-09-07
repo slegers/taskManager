@@ -50,7 +50,7 @@ class taskController extends Controller
             'title' =>  $request['title'],
             'omschrijving' => $request['body'],
             'notificate' => array_key_exists('email',$request),
-            'closed' => '1',
+            'closed' => '0',
             ]
         );
         return $this->create();
@@ -78,7 +78,8 @@ class taskController extends Controller
      */
     public function edit($id)
     {
-        //
+        $taak = Task::find($id);
+        return view() 
     }
 
     /**
@@ -101,7 +102,9 @@ class taskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Task::findOrFail($id);
+        $item->delete();
+        return $this->index();
     }
 
    public function sideBalk($numb){

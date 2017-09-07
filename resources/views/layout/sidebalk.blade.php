@@ -9,11 +9,11 @@
           <small>{{ date('l d F',strtotime($taak->deadline_date)) }}</small>
           </h4>
       <div class="taskButtons">
-        <form>
+        <form method="get" action="/task/<?=$taak->id?>/delete">
           <input type="submit" value="delete">
         </form>
         <form method="get" action="/task/<?= $taak->id?>">  
-          <input type="submit" value="edit">
+          <input type="submit" value="show">
         </form>
         <!--   <div class="tags">
               Speelplein, werk
