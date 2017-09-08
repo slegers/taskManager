@@ -79,7 +79,8 @@ class taskController extends Controller
     public function edit($id)
     {
         $taak = Task::find($id);
-        return view() 
+        $side = $this->sideBalk(3);
+        return view('tasks.create_task',compact('side','taak'));
     }
 
     /**
@@ -91,7 +92,20 @@ class taskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $taak = Task::find($id);
+        DB::table('task')
+        ->where('id', $id)
+        ->update(
+            [
+                'deadline_date' => $request['date'] ."",
+                'deadline_time'=> $request['time'],
+                'title' =>  $request['title'],
+                'omschrijving' => $request['body'],
+                'notificate' => isset($request->email),
+                'closed' => isset($request->closed)
+            ]);
+                    $side = $this->sideBalk(3);
+            return $this->show($id); 
     }
 
     /**

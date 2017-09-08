@@ -22,3 +22,4 @@ Route::get('task/{id}','taskController@show');
 Route::post('/task','taskController@store');
 Route::get('/task/{id}/delete','taskController@destroy');
 Route::get('/task/{id}/edit','taskController@edit');
+Route::post('/task/{id}/update','taskController@update');

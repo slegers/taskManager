@@ -43,6 +43,16 @@ Show Task
         <p> {{ $taak->notificate == 0 ? "no" : "yes" }} </p>
     </div>
 </div>
+<div class="row line">
+    <div class="col-sm-2">
+        <div class="showTitle">
+            <body>Closed:</body>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <p> {{ $taak->closed == 0 ? "no" : "yes" }} </p>
+    </div>
+</div>
 <div class="row">
     <div class="col-sm-2"></div>
         <div class="col-sm-8">
